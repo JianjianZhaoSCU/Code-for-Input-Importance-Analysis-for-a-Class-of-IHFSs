@@ -204,10 +204,10 @@ for perm_idx = 1:size(all_permutations, 1)
 %     ylabel('Output', 'FontSize', 12, 'FontWeight', 'bold');
 %     title('FRI dataset', 'FontSize', 12, 'FontWeight', 'bold');
 %     ax = gca;
-%     ax.TickLength = [0.02, 0.02]; % 控制刻度线长度（可选）
+%     ax.TickLength = [0.02, 0.02];
 %     ax.XColor = 'k'; 
 %     ax.YColor = 'k';
-%     set(ax, 'FontSize', 12, 'FontWeight', 'bold'); % 设置刻度标签的字体大小和加粗
+%     set(ax, 'FontSize', 12, 'FontWeight', 'bold');
 end
 
 rmse_values = results(:, 2); 
@@ -253,4 +253,5 @@ end
 function sum_elements = calculate_sum(matrix,mm)
     sub_matrix = matrix(mm/2:(mm/2)+1, mm/2:(mm/2)+1);
     sum_elements = sum(sub_matrix(:));
+
 end
